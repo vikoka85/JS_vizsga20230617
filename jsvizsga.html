@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript vizsga 2023.06.17.</title>
+    <meta charset="UTF-8">
+    <meta
+    http-equiv="X-UA-Compatible"
+    content="IE edge">
+    <meta name="viewport"
+    content="with=device-width,
+    initial scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<h1>JavaScript elméleti kérdések</h1>
+
+<br>
+
+<h3>Mikor használandó a JS egy weboldal felépítése során, hogyan használható?</h3>
+<p>Ha nem statikus weboldalt készítünk, akkor mindenképpen szükség van a JS alkalmazására, ahol meghatározzuk, beállítjuk a weboldal dinamikus részeti, akár egy carousselt, vagy ennél bonyolultabb funkciókat, pl. adatbekérés, gombok működése stb..</p>
+
+<br>
+
+<h3>Sorold fel, hogyan határozhatunk meg egy értéket és röviden definiáld őket.</h3>
+<p>3 féleképpen határozunk meg értéket: let, var és const. A let esetében a változók arra a részre vonatkoznak, amelyben szerepelnek (blokk). Újra lehetséges értéket rendelni hozzájuk, tehát változtatni az értékét egy másik blokkban.</p>
+<p>A var a let-hez hasonló, a hatóköre attől függ, hogy hol van deklarálva, vonatkozhat csak az adott blokkra vagy föggvényre, de lehet globális. Értéke ugyanúgy újra meghatározható. </p>
+<p>A const-al deklarált változók értékét nem lehet változtatni, nem lehet új értéket hozzárendelni.</p>
+
+<br>
+
+<h3>Ismertesd a literálókat.</h3>
+<p>A literálókat arra használjuk, hogy fix értéket fejezzünk ki.</p>
+<p>Literálók: string/szöveg pl. let animal = "dog"</p>
+<p>Integer/szám: let age = 35, ez lehet floating point (lebegőpontos) literáló: let value = 8,653</p>
+<p>Boolean (logikai) literálók: pl. let igaz = true; let hamis = false; </p>
+<p>Object (objektum) literals: itt objektumokat határozunk meg. pl. let animal = {name: "Bobby", age: 2, color: brown};</p>
+<p>Array (tömb) literals: itt pedig tömbként, pl. let newArray = [1, 2, 3, 4, 5];</p>
+
+<br>
+
+<h3>Hogyan deklarálhatunk egy változót, és hogyan alkalmazhatóak?</h3>
+<p>Változót lehet globálisan deklarálni, vagy lokálisan (ezen belül blokk-szinten vagy föggvény-szinten)</p>
+<p>3 féleképpen határozunk meg értéket: let, var és const. A let esetében a változók arra a részre vonatkoznak, amelyben szerepelnek (blokk). Újra lehetséges értéket rendelni hozzájuk, tehát változtatni az értékét egy másik blokkban.</p>
+<p>A var a let-hez hasonló, a hatóköre attől függ, hogy hol van deklarálva, vonatkozhat csak az adott blokkra vagy föggvényre, de lehet globális. Értéke ugyanúgy újra meghatározható. </p>
+<p>A const-al deklarált változók értékét nem lehet változtatni, nem lehet új értéket hozzárendelni.</p>
+
+<br>
+
+<h3>Mikor kell elágazásokat használni? Ismertesd őket (2-3 mondatban).</h3>
+<p>Elágazásokat akkor használunk, ha a folyamat feltételhez kötött, azaz többféleképpen haladhat tovább, ekkor meg tudjuk adni, hogy mi történjen abban az esetben, ha a feltételünk igaz, vagy hamis. Ezt használjuk pl. adott oldalra való belépéshez szükséges jelszó-ellenőrzéshez is.</p>
+<p>Elágazástapusok: IF, Else, ELse IF, SWITCH.</p>
+<p>IF: ez a leggyakoribb. Alapesetben 1 ág van, ami csak akkor fog lefutni, ha a megadott feltétel teljesül. Ezt akkor használjuk, ha csak 1 feltétel van.</p>
+<p>pl.: if (feltétel megadása) {
+    igaz;}
+  </p>
+
+  <p>IF else:  ezt akkor használjuk, ha szeretnénk betenni még egy ágat, amelyben megadjuk, hogy mi történjen "nem igaz" esetlben, tehát ha teljesül a feltétel, akkor az igaz ág fut le, ha pedig nem teljesül, akkor az else ág.</p>
+
+  <p>else IF elágazás: ezzel bevihetünk a vizságlatba több ágat, mint kettő, korátlanul használható.</p>
+
+  <p>SWITCH: ezt akkor használjuk, ha bizonyos feltételeknek való megfelelést akarjuk vizsgálni, és tudjuk ezeket, pl. a hét napjai.</p>
+  <p>Pl. switch (meghatározás) {case 1: vizsgálat; break;case 2: vizsgálat; stb... default: vizsgálat;}</p>
+
+
+
+<br>
+
+<h3>Mikor azok az Objectek? Írj egy példát is.</h3>
+<p>Az OOP (objektumorientált programozás) alapja. Az Object-ek / objektumok olyan egységek, amelyekbena változókat tulajdonságokkal és viselkedésekkel (függvények) ruházzuk fel.</p>
+<p>Példa: meghatározzuk az állat fogalmát, ezen belül megadjuk, hogy a fajtája: "kutya", a színe: "barna", a lábainak száma: 4</p>
+<p>Tehát: const allat = {fajta:"kutya", színe:"barna", lábainak száma: 4};</p>
+
+<br> 
+
+<h3>Helyes e a következő példa, ha nem miért nem?!pl: let x :  [ { x= fname: “John”, lname: “Doe, age: “34”},[1,2,3,4, “yes”, “no”] ];</h3>
+<p> az X után nem jó a kettőspont, hanem = kell. A kapcsos zárójel után nem kell ez:  x=. A Doe esetében hiányzik a bezáró idézőjel. A 34-et nem kell idézőjelbe tenni, mert szám. Az array jónak tűnik (:) .</p>
+
+<h3>Mik azok az Array-ek? Írj egy példát is.</h3>
+<p>A egy speciális változó, amely egyidejűleg több elemet képes tárolni</p>
+<p>pl.: var PÉLDA = [1,2,3,4, “yes”, “no”];</p>
+
+<h3>Hogyan vizsgálható egy tömb? 2-3 példát írj kérlek.</h3>
+<p>Ha egy elemet el akarunk érni a tömbben, akkor meg kell adnunk, hogy a tömb hányadik indexét akarjuk elérni tömbnév[index];</p>
+
+
+<h3>Hogyan mehetünk végig egy tömb/object/lista hosszán? (2-3 mondatban)</h3>
+<p>Ha a tömb összes elemét el akarjuk érni, akkor szimplán csak be kell írni a tömb nevét.</p>
+
+<h3>Sorolj fel néhány events metódus.</h3>
+<p>Onclick, onchange, onmouseover/onmouseout, onkeypress, onload</p>
+
+<h3>Miért érdemes függvényeket használni?</h3>
+<p>Újra lehet használni őket, elég csak még egyszer meghívni a munka során.</p>
+
+<h3>Hogyan paraméterezhetünk fel egy függvényt?</h3>
+<p>function NÉV(OPCIONÁLIS.PARAMÉTEREK) {    //ide jön a programkód} </p>
+
+<h3>Mi az a function visszatérési érték?</h3>
+<p> Visszatérési értékének nevezzük azt az értéket, amelyet a metódusunk ad vissza a meghívását követően.</p>
+
+<h3>Mikor futtatható egy függvény?</h3>
+<p>Fontos, hogy meg legyen hívva.</p>
+
+<h3>Mi az a DOM?</h3>
+<p>A DOM egy olyan programozói interfész, amin keresztül a megjelenített HTML dokumentum manipulálható, a HTML elemek fastruktúrájának leképezése egy objektum-fába. Tehát az id-k megfelelősége esetén behívhatók értékek.</p>
+
+<h3>Mire utasít a következő példa: document.getElementByClassName(“example”).innerText</h3>
+<p>a kód lekéri a dokumentum összes elemét, amelyek esetében a ClassName "example", és ennek eredményeként visszaadja a belső szövegüket.</p>
+
+<h3>Hogyan nyerhető ki egy form input mező értéke és hogyan jeleníted azt meg HTML-ben?</h3>
+<p>document.getElementById("myInputField").value</p>
+
+<h3>Mi az a callback function?</h3>
+<p>Olyan függvény, amelybe egy másik függvény kerül beágyazásra, melyet ezután a külső függvényben meghívunk valamilyen művelet végrehajtására.</p>
+
+<h3>Definiált: Date();</h3>
+<p>itt az a kérdés, hogy hogyan kell megadni a mai dátumot függvénnyel?</p>
+<p>const x = new Date();  document.getElementById("demo").innerHTML = x;</p>
+
+<h3>Definiáld: onclick();</h3>
+<p></p>
+
+<h3>Definiáld: function Click(){…};</h3>
+<p></p>
+
+</body>
+
+</head>
